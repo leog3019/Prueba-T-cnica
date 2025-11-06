@@ -17,4 +17,4 @@ def ejecutar_nomina():
         print("-" * 50)
 
 if __name__ == "__main__":
-    ejecutar_nomina()
+    ejecutar_nomina() # ejecuta la funcion para mostrar la nomina
