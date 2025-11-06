@@ -1,3 +1,27 @@
+class Empleado:
+
+    def __init__(self, nombre, apellido, id_empleado, salarioBase):
+        self._nombre = nombre
+        self._apellido = apellido
+        self._id = id_empleado
+        self._salarioBase = salarioBase
+
+    # --- Getters para mostrar informacion 
+    def get_nombre_completo(self):
+        return f"{self._nombre} {self._apellido}"  
+    
+    def get_id(self):
+        return self._id
+
+    # --- calcular el salario esto se sobreescribe con sus clases hijas
+    def calcularSalario(self):
+            return self._salarioBase
+
+    def mostrarInformacion(self):
+        print(f"ID: {self._id}")
+        print(f"Nombre: {self.get_nombre_completo()}")
+        print(f"Salario Base: ${self._salarioBase:,.2f}")
+
 class EmpleadoTiempoCompleto(Empleado):
 
     def __init__(self, nombre, apellido, id_empleado, salarioBase):
